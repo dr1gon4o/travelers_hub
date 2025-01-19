@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+
+    <section id="delete">
+
+        <div class="form">
+            <h1>Are you sure you want to delete your Traveler's Profile?</h1>
+            <!-- Delete Traveler's Profile Form -->
+            <form class="register-form" method="POST" action="{% url 'delete-traveler' %}">
+                {% csrf_token %}
+                <!-- Confirm Button -->
+                <button type="submit">Yes</button>
+            </form>
+        </div>
+        <!-- End Delete Form -->
+
+    </section>
+
+</main>
+
+{% endblock %}
